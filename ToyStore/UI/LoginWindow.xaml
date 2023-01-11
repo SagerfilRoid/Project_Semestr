@@ -1,0 +1,45 @@
+﻿<Window x:Class="ToyStore.UI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToyStore.UI"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="400" 
+        WindowStyle="None" 
+        ResizeMode="NoResize" Background="Transparent"
+        AllowsTransparency="True">
+    <Border Background="#272537" CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="340"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="2" Content="Exit           "   FontSize="15" Click="Button_Click" Height="55" Width="67" Style="{StaticResource Modern }"></Button>
+            <Label Grid.Column="1" FontSize="24"
+                   Content="Authorization " Foreground="White" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Label Content="Login" FontSize="18" 
+                       Margin="0,60,0,0" Foreground="White"/>
+                <TextBox FontSize="28" x:Name="txt" TextChanged="txt_TextChanged" />
+                <Label Content="Password" Foreground="White" FontSize="18" Margin="0,15,0,0" />
+                <Grid>
+                    <PasswordBox PasswordChar="*"  FontSize="28" x:Name="pswd"/>
+                    <TextBox FontSize="28" x:Name="txtpswd" Visibility="Collapsed"/>
+                </Grid>
+                <CheckBox x:Name="Checkpswd" Foreground="White" Content="Show password" FontSize="15" Margin="0,15,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <Button Content="Login" Margin="0,20,20,0" Width="100" Height="40" x:Name="btnLogin" Click="btnLogin_Click" Style="{StaticResource Modern}"/>
+
+            </StackPanel>
+        </Grid>
+
+    </Border>
+    
+</Window>
